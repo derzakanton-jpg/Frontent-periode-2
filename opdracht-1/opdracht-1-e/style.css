@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --row-gap: 10px;
+    --column-gap: 10px;
+    --column-padding: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    border: 5px solid turquoise;
+    padding: 5px;
+}
+
+.container h2 {
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--column-gap);
+}
+
+[class^="col-"] {
+    padding: var(--column-padding);
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/* Grid System */
+
+.col-1 {
+    flex-basis: 8.33%;
+}
+
+.col-2 {
+    flex-basis: 16.66%;
+}
+
+.col-3 {
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-basis: 33.33%;
+}
+
+.col-5 {
+    flex-basis: 41.66%;
+}
+
+.col-6 {
+    flex-basis: 50%;
+}
+
+.col-7 {
+    flex-basis: 58.33%;
+}
+
+.col-8 {
+    flex-basis: 66.66%;
+}
+
+.col-9 {
+    flex-basis: 75%;
+}
+
+.col-10 {
+    flex-basis: 83.33%;
+}
+
+.col-11 {
+    flex-basis: 91.66%;
+}
+
+.col-12 {
+    flex-basis: 100%;
+}
+
+/* Extra: verschillende kleuren */
+
+@media (max-width: 1200px) {
+    .container {
+        border-color: blue;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        border-color: green;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        border-color: orange;
+    }
+}
+
+/* Telefoon */
+
+@media (max-width: 576px) {
+
+    .container {
+        border: 5px solid red;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    [class^="col-"] {
+        flex-basis: 100%;
+    }
+
+}
